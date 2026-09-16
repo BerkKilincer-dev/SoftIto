@@ -1,0 +1,17 @@
+# SQLite geçici dosyaları
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite-journal
+
+# İşletim sistemi
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editör
+.vscode/
+.idea/
+*.swp
+*~
