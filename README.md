@@ -16,7 +16,8 @@ Her defterin başındaki **Open in Colab** rozetine tıklayarak kurulum yapmadan
 | [big_data](big_data/) | Colab üzerinde Apache Hadoop ve Apache Spark lab'ları |
 | [Nlp](Nlp/) | Tokenizasyon, BPE, TF-IDF, Word2Vec, GloVe, FastText |
 | [sequence-models](sequence-models/) | RNN, LSTM, GRU, kaybolan gradyan, Seq2Seq + Attention |
-| [transformers-llm](transformers-llm/) | Sıfırdan Transformer, mini GPT, modern LLM bileşenleri, KV cache, LoRA, RAG, RLHF/DPO, kuantizasyon, LLM güvenliği |
+| [transformers-llm](transformers-llm/) | Sıfırdan Transformer, mini GPT, modern LLM bileşenleri, KV cache, LoRA, RAG, RLHF/DPO, kuantizasyon, LLM güvenliği, aktivasyon yönlendirme, bilgi damıtma |
+| [llm-agents](llm-agents/) | Derinlemesine RAG (hibrit arama, reranking, değerlendirme), LangChain ve araç entegrasyonu, LangGraph ve çoklu ajan sistemleri |
 
 ## Konu haritası: Makine Öğrenmesi → LLM
 
@@ -63,6 +64,17 @@ Her defterin başındaki **Open in Colab** rozetine tıklayarak kurulum yapmadan
 | RAG, RLHF ve DPO | [transformers-llm/07_rag_ve_hizalama_rlhf_dpo.ipynb](transformers-llm/07_rag_ve_hizalama_rlhf_dpo.ipynb) |
 | FP16 → INT8/INT4, simetrik / asimetrik, PTQ vs QAT | [transformers-llm/08_kuantizasyon.ipynb](transformers-llm/08_kuantizasyon.ipynb) |
 | Prompt enjeksiyonu, jailbreak, veri sızdırma, red teaming | [transformers-llm/09_llm_guvenligi.md](transformers-llm/09_llm_guvenligi.md) |
+| Aktivasyon yönlendirme (Activation Steering) | [transformers-llm/10_aktivasyon_yonlendirme.ipynb](transformers-llm/10_aktivasyon_yonlendirme.ipynb) |
+| Bilgi damıtma (Knowledge Distillation) | [transformers-llm/11_bilgi_damitma.ipynb](transformers-llm/11_bilgi_damitma.ipynb) |
+
+### RAG, LangChain ve Ajanlar
+| Konu | Defter |
+|---|---|
+| RAG: chunking, dense / BM25 / hibrit arama, reranking, değerlendirme | [llm-agents/01_rag_derinlemesine.ipynb](llm-agents/01_rag_derinlemesine.ipynb) |
+| LangChain: LCEL, yapılandırılmış çıktı, araç entegrasyonu, ajan, hafıza | [llm-agents/02_langchain_arac_entegrasyonu.ipynb](llm-agents/02_langchain_arac_entegrasyonu.ipynb) |
+| LangGraph: ReAct, insan onayı, supervisor çoklu ajan, map-reduce | [llm-agents/03_langgraph_coklu_ajan.ipynb](llm-agents/03_langgraph_coklu_ajan.ipynb) |
+
+> Tüm defterler **ücretsizdir**: ücretli API anahtarı gerekmez, modeller Colab GPU'sunda yerel olarak çalışır.
 
 ## Çalıştırma
 
@@ -70,7 +82,8 @@ Her defterin başındaki **Open in Colab** rozetine tıklayarak kurulum yapmadan
 
 **Lokal:**
 ```bash
-pip install numpy pandas matplotlib seaborn scikit-learn torch xgboost lightgbm transformers tokenizers jupyter
+pip install numpy pandas matplotlib seaborn scikit-learn torch torchvision xgboost lightgbm transformers tokenizers \
+            sentence-transformers rank_bm25 faiss-cpu langchain langchain-ollama langgraph jupyter
 jupyter notebook
 ```
 
