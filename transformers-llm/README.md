@@ -11,5 +11,9 @@
 | 07 | `07_rag_ve_hizalama_rlhf_dpo.ipynb` | **RAG** (retriever, Hit@k, kaynaklı cevap, halüsinasyon karşılaştırması), **RLHF** (Bradley–Terry ödül modeli, KL kısıtlı politika), **DPO**, β analizi, TRL |
 | 08 | `08_kuantizasyon.ipynb` | FP32/FP16/BF16/INT8/INT4, bellek bant genişliği, **simetrik vs asimetrik (zero-point)**, aykırı değerler ve group-wise, **PTQ**, aktivasyon kalibrasyonu, **QAT** (STE), bitsandbytes |
 | 09 | `09_llm_guvenligi.md` | **Prompt enjeksiyonu** (doğrudan / dolaylı), **jailbreak** aileleri, **görsel linkleriyle veri sızdırma**, savunma katmanları, **red teaming** süreci, kontrol listesi |
+| 10 | `10_aktivasyon_yonlendirme.ipynb` | **Activation steering**: residual stream okuma, zıt çiftlerden yön vektörü (CAA / ActAdd), **doğrusal sonda** ile katman seçimi, `register_forward_hook` ile yönlendirme, α taraması (duygu + perplexity), duygu ve üslup yönlerini birleştirme |
+| 11 | `11_bilgi_damitma.ipynb` | **Knowledge distillation**: karanlık bilgi ve sıcaklık, Hinton kaybı, Fashion-MNIST'te öğretmen CNN → 40× küçük öğrenci, T ve α taraması, **FitNets** ara katman damıtma, LLM'lerde token seviyesi (Qwen2.5-1.5B → 0.5B) ve dizi seviyesi damıtma |
 
-> 03, 04 ve 07 numaralı defterler Hugging Face Hub'dan model indirir; Colab'da T4 GPU ile çalıştırmanız önerilir.
+> 03, 04, 07, 10 ve 11 numaralı defterler Hugging Face Hub'dan model indirir; Colab'da T4 GPU ile çalıştırmanız önerilir. Hiçbiri ücretli API gerektirmez.
+>
+> RAG, LangChain ve LangGraph defterleri için → [`llm-agents/`](../llm-agents/)
